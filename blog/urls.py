@@ -16,7 +16,8 @@ Including another URLconf
 from django.conf.urls import patterns, url
 
 urlpatterns = patterns('blog.views',
-    url(r'^accueil$', 'home'),
+    url(r'^accueil$', 'accueil'),
     url(r'^date$', 'date_actuelle'),
     url(r'^addition/(?P<nombre1>\d+)/(?P<nombre2>\d+)/$', 'addition'),
+    url(r'^article/(?P<id>\d+)$', 'lire'),
 )
