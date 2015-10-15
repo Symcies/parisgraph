@@ -12,6 +12,7 @@ Project = Building a web application with the following goal :
 Therefor, each place has a weight depending on the user preferences.
 
 At first, these preferences are choosen by the user. 
+
 Machine Learning Part: The goal is to ask what the user likes within a set of pictures/description so that the algorithm sets the user's preferences iteslf
 
 
