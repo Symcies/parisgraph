@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^blog/', include('blog.urls'))
+    url(r'^blog/', include('blog.urls')),
+    #url(r'^api-auth/', include('rest_framework.urls', namespace = 'rest_framework)) # If using the browsable API -> login and logout views 
 ]
