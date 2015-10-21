@@ -106,3 +106,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIR = (
     os.path.join(BASE_DIR, "static"),
 )
+
+# Added to make the Django Rest Framework work
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
