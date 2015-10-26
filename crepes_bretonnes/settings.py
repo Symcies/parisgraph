@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'rest_framework',               # Used for the Django Rest Framework
+    'snippets',                     #Name of the application used in the API
 )
 
 MIDDLEWARE_CLASSES = (
