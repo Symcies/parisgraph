@@ -19,5 +19,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('blog.urls')),
+    url(r'^snippets/', include('snippets.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace = 'rest_framework') )
+    # the rest_framework.urls enables the "login" button to have registered users
     #url(r'^api-auth/', include('rest_framework.urls', namespace = 'rest_framework)) # If using the browsable API -> login and logout views 
 ]
