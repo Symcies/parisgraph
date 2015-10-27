@@ -2,11 +2,14 @@ from django.db import models
 from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles
 
+<<<<<<< HEAD
 # Pigment library to populate the highlighted field
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters.html import HtmlFormatter
 from pygments import highlight
 
+=======
+>>>>>>> origin/master
 LEXERS = [item for item in get_all_lexers() if item[1]]
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
 STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
@@ -19,6 +22,7 @@ class Snippet(models.Model):
     linenos = models.BooleanField(default=False)
     language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
     style = models.CharField(choices=STYLE_CHOICES, default='friendly', max_length=100)
+<<<<<<< HEAD
     # Used for authentication permissions = author of the snippet, highlighted HTML representation of the snippet    
     owner = models.ForeignKey('auth.User', related_name='snippets') 
     highlighted = models.TextField(default = '')
@@ -39,3 +43,8 @@ class Snippet(models.Model):
         
         self.highlighted = highlight(self.code, lexer, formatter)
         super(Snippet, self).save(*args, **kwargs)
+=======
+
+    class Meta:
+        ordering = ('created',)
+>>>>>>> origin/master

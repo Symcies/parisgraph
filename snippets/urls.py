@@ -13,6 +13,7 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+<<<<<<< HEAD
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
 from snippets import views
@@ -27,3 +28,10 @@ urlpatterns = [
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
+=======
+from django.conf.urls import patterns, url
+
+urlpatterns = patterns('snippets.views',
+   url(r'^awesome$', 'function0'),
+)
+>>>>>>> origin/master

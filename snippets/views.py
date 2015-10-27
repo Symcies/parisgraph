@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  # We do not need the from django.shortcuts import render anymore
  # Because it was changed/turned into rest_framework.response import Response
@@ -154,3 +155,14 @@ def SnippetDetail(request, pk):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 '''
+=======
+from django.shortcuts import render
+
+
+# Create your views here.
+
+
+def function0(request):
+    snippets = 'Part of the code'
+    return render(request, 'snippets/awesome.html', locals())
+>>>>>>> origin/master
