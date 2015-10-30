@@ -15,15 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from crepes_bretonnes.views import IndexView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('blog.urls')),
     url(r'^snippets/', include('snippets.urls')),
-<<<<<<< HEAD
-    url(r'^api-auth/', include('rest_framework.urls', namespace = 'rest_framework') )
+    url(r'^api-auth/', include('rest_framework.urls', namespace = 'rest_framework') ),
     # the rest_framework.urls enables the "login" button to have registered users
-=======
->>>>>>> origin/master
     #url(r'^api-auth/', include('rest_framework.urls', namespace = 'rest_framework)) # If using the browsable API -> login and logout views 
+
+    # It is very important that the last URL in the above snippet always be the last URL. 
+    #This is known as a passthrough or catch-all route. 
+    #It accepts all requests not matched by a previous rule and passes the request through to AngularJS's router for processing. The order of other URLS is normally insignificant.
+    url('^.*$', IndexView.as_view(), name='index'),
 ]
