@@ -18,4 +18,10 @@ Machine Learning Part: The goal is to ask what the user likes within a set of pi
 
 # Technologies
 - Front End : AngularJS & Google Maps Javascript API (Direction)
-- Back End : Django framework with Neo4J to work with graph database
+- Back End : Django & Django_REST frameworks (with Neo4J to work with graph database?
+
+# Thanks to 
+- openclassroom tutorials : Django, Javascript
+- Django official tutorials
+- Django_REST official tutorials
+_ Thinkster tutorial (Django & Angular ) : 	https://thinkster.io/django-angularjs-tutorial

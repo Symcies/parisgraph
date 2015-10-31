@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from crepes_bretonnes.views import IndexView
+from crepes_bretonnes.views import accueil
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -28,5 +28,5 @@ urlpatterns = [
     # It is very important that the last URL in the above snippet always be the last URL. 
     #This is known as a passthrough or catch-all route. 
     #It accepts all requests not matched by a previous rule and passes the request through to AngularJS's router for processing. The order of other URLS is normally insignificant.
-    url('^.*$', IndexView.as_view(), name='index'),
+    url('^.*$', accueil, name='accueil'),
 ]
