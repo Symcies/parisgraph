@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'blog',
     'rest_framework',               # Used for the Django Rest Framework
     'snippets',                     #Name of the application used in the API
+    'spots',
 )
 
 MIDDLEWARE_CLASSES = (
